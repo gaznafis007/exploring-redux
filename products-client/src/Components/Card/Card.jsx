@@ -20,6 +20,9 @@ const Card = ({product, eventHandler, actionName, btnColor}) => {
             </p>
             <p>Rating: {rating}</p>
             <p className="font-semibold capitalize">price: {price}</p>
+            {
+                product.qty && <p className="font-semibold capitalize">quantity: {product.qty}</p>
+            }
             <Button handler={eventHandler} bgColor={btnColor}>{actionName}</Button>
         </div>
     </div>
