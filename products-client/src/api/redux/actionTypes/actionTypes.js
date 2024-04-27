@@ -3,4 +3,6 @@ export const reduxActionTypes = {
   REMOVE_FROM_CART: "REMOVE_FROM_CART",
   LOADING: "LOADING",
   ERROR: "ERROR",
+  IN_STOCK: "IN_STOCK",
+  TOGGLE_BRANDS: "TOGGLE_BRANDS",
 };

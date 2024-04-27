@@ -28,7 +28,7 @@ const Wishlist = () => {
   //     </>
   //   )
   // }
-  const {wishlists} = useSelector((state)=>state)
+  const {wishlists} = useSelector((state)=>state.product)
   const dispatch = useDispatch()
   const removeFromWishlists = (product) => {
     console.log(product.model);
