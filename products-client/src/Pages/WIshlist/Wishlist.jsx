@@ -40,7 +40,7 @@ const Wishlist = () => {
         <Header>This is Wishlist</Header>
         <div className="my-2 grid grid-cols-3 gap-3">
           {
-            wishlists.map(wishlist=><Card key={wishlist.model} product={wishlist} actionName={"remove from wishlist"} btnColor={"bg-red-500"} eventHandler={()=>removeFromWishlists(wishlist)}></Card>)
+            wishlists.sort((a,b)=>a.position-b.position).map(wishlist=><Card key={wishlist.model} product={wishlist} actionName={"remove from wishlist"} btnColor={"bg-red-500"} eventHandler={()=>removeFromWishlists(wishlist)}></Card>)
           }
         </div>
     </>
