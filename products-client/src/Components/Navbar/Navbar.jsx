@@ -16,7 +16,10 @@ const Navbar = () => {
                     <Link to="/topRated">Top Rated</Link>
                 </li>
                 <li>
-                    <Link to="wishlist">Wishlist</Link>
+                    <Link to="/wishlist">Wishlist</Link>
+                </li>
+                <li>
+                    <Link to="/dashboard">Dashboard</Link>
                 </li>
             </ul>
         </div>

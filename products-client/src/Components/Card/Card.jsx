@@ -11,13 +11,16 @@ const Card = ({product, eventHandler, actionName, btnColor}) => {
         </div>
         <div>
             <h2 className="text-2xl font-semibold my-1">{model}</h2>
-            <p className="my-2">
+            {
+                keyFeature &&
+                <p className="my-2">
                 <ul>
                     {
                         keyFeature.map((feature,idx)=><li key={idx}>{feature}</li>)
                     }
                 </ul>
             </p>
+            }
             <p>Rating: {rating}</p>
             <p className="font-semibold capitalize">price: {price}</p>
             {

@@ -4,6 +4,7 @@ const initialValue = {
   loading: false,
   error: false,
   wishlists: [],
+  products: [],
 };
 
 export const productReducer = (state = initialValue, action) => {
@@ -11,6 +12,24 @@ export const productReducer = (state = initialValue, action) => {
     (wishlist) => wishlist.model === action.payload.model
   );
   switch (action.type) {
+    case reduxActionTypes.LOAD_PRODUCT:
+      console.log(action.payload);
+      return {
+        ...state,
+        products: action.payload,
+      };
+    case reduxActionTypes.ADD_PRODUCT:
+      return {
+        ...state,
+        products: [...state.products, action.payload],
+      };
+    case reduxActionTypes.DELETE_PRODUCT:
+      return {
+        ...state,
+        products: [
+          ...state.products.filter((product) => product._id !== action.payload),
+        ],
+      };
     case reduxActionTypes.ADD_TO_CART:
       if (selectedProduct) {
         selectedProduct.qty
